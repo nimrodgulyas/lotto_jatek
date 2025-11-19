@@ -1,20 +1,6 @@
-"""
-2-3 fős csoportokban készítsetek egy lottó játékot!
-Legyen lehetőség a játékos tippjeinek a felvételére!
-Utána a program sorsoljon ki számokat!
-Végül írjuk ki, hogy mennyi találat volt!
-Ha tudjátok, többféle lottó játékkal is lehessen játszani!
-"""
 
 import random
 
-lottoszamok = []
-
-for num in range (5):
-    sorsoltszamok = random.randint(1,91)
-    lottoszamok.append(sorsoltszamok)
-
-print(f'A  gép által sorsolt számok: {lottoszamok}')
 
 valasz = input("A szerencsejáték függőséget okoz! Biztos szeretnél játszani?(i/n): ")
 if valasz == ("i"):
@@ -40,6 +26,15 @@ print(f'A megadott számaid: {szamok}')
 # for num in range (5):
 #     sorsoltszamok = random.randint(1,91)
 #     lottoszamok.append(sorsoltszamok)
+
+lottoszamok = []
+
+for num in range (5):
+    sorsoltszamok = random.randint(1,91)
+    lottoszamok.append(sorsoltszamok)
+
+print(f'A  gép által sorsolt számok: {lottoszamok}')
+
 
 
 talalatok = []
