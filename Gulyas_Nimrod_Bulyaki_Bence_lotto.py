@@ -8,6 +8,19 @@ Ha tudjátok, többféle lottó játékkal is lehessen játszani!
 
 import random
 
+lottoszamok = []
+
+for num in range (5):
+    sorsoltszamok = random.randint(1,91)
+    lottoszamok.append(sorsoltszamok)
+
+print(f'A  gép által sorsolt számok: {lottoszamok}')
+
+valasz = input("A szerencsejáték függőséget okoz! Biztos szeretnél játszani?(i/n): ")
+if valasz == ("i"):
+    print("Add meg a lottószámokat!")
+
+
 szamok = []
 for i in range (5):
     while True:
@@ -23,27 +36,34 @@ for i in range (5):
         break
 print(f'A megadott számaid: {szamok}')
 
-lottoszamok = []
-
-for num in range (5):
-    sorsoltszamok = random.randint(1,91)
-    lottoszamok.append(sorsoltszamok)
-
-print(f'A  gép által sorsolt számok: {lottoszamok}')
-
-
-lottoszamok = [5, 7, 8, 9, 10]
 
 # for num in range (5):
 #     sorsoltszamok = random.randint(1,91)
 #     lottoszamok.append(sorsoltszamok)
 
-print(f'A gép által sorsolt számok: {lottoszamok}')
 
 talalatok = []
 vegso = []
 vegso.append(len(set(lottoszamok) & set(szamok)))
 print(f"A találataid száma: {vegso}!")
+
+
+if 1 in vegso:
+    print('Nyertél 500 Ft- ot!')
+elif 2 in vegso:
+    print('Nyertél ezer öccá forintot!')
+
+elif 3 in vegso:
+    print("Nyertél 100k forintot!")
+
+elif 4 in vegso:
+    print("Nyertél 5 millió forintot!")
+
+elif 5 in vegso:
+    print("Halooooooo 5-ös lottód van he megnyerted a szerelmem!")
+
+else:
+    print("Sajnos nem nyertél!")
 
 # for szam in szamok:
 #     if szam in lottoszamok:
