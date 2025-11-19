@@ -29,5 +29,24 @@ for num in range (5):
     sorsoltszamok = random.randint(1,91)
     lottoszamok.append(sorsoltszamok)
 
-print(lottoszamok)
+print(f'A  gép által sorsolt számok: {lottoszamok}')
+
+
+lottoszamok = [5, 7, 8, 9, 10]
+
+# for num in range (5):
+#     sorsoltszamok = random.randint(1,91)
+#     lottoszamok.append(sorsoltszamok)
+
+print(f'A gép által sorsolt számok: {lottoszamok}')
+
+talalatok = []
+vegso = []
+vegso.append(len(set(lottoszamok) & set(szamok)))
+print(f"A találataid száma: {vegso}!")
+
+# for szam in szamok:
+#     if szam in lottoszamok:
+#         talalatok.append(szam)
+# print(talalatok)
 
