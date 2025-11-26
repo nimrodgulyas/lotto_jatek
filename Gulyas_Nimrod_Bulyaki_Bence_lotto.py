@@ -1,7 +1,6 @@
 
 import random
 
-
 valasz = input("A szerencsejáték függőséget okoz! Biztos szeretnél játszani?(i/n): ")
 if valasz == ("i"):
     print("Add meg a lottószámokat!")
@@ -40,7 +39,8 @@ print(f'A  gép által sorsolt számok: {lottoszamok}')
 talalatok = []
 vegso = []
 vegso.append(len(set(lottoszamok) & set(szamok)))
-print(f"A találataid száma: {vegso}!")
+talalatok_szama = (len(set(lottoszamok) & set(szamok)))
+print(f"A találataid száma: {talalatok_szama}!")
 
 
 if 1 in vegso:
